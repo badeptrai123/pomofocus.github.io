@@ -1,0 +1,23 @@
+@import "variables";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    background: $main-color;
+    font-family: sans-serif;
+    position: relative;
+    transition: all .7s ease;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pomofocus</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="logo">
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <a href="" id="logo">Pomofocus</a>
+            </div>
+
+            <ul id="main-menu">
+                <li class="report">
+                    <ion-icon name="stats-chart"></ion-icon>
+                    <span>Report</span>
+                </li>
+                <li class="setting">
+                    <ion-icon name="settings"></ion-icon>
+                    <span>Setting</span>
+                </li>
+                <li class="login">
+                    <ion-icon name="person-circle"></ion-icon>
+                    <span>Login</span>
+                </li>
+            </ul>
+            <div class="timer-setting">
+                <div class="top">
+                    <span>TIMER SETTING</span>
+                    <button class="close">
+                        <ion-icon name="close"></ion-icon>
+                    </button>
+                </div>
+                <div class="content">
+                    <div class="time-minutes">
+                        <span>Time(minutes)</span>
+                        <ul>
+                            <li>
+                                <label for="pomoSetting">Pomodoro</label>
+                                <input type="number" min="0" value="30" name="" id="pomoSetting">
+                            </li>
+                            <li>
+                                <label for="shortSetting">Short Break</label>
+                                <input type="number" min="0" name="" value="5" id="shortSetting">
+                            </li>
+                            <li>
+                                <label for="longSetting">Long Break</label>
+                                <input type="number" min="0" name="" value="15" id="longSetting">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="interval">
+                        <span>Long Break interval</span>
+                        <input type="number" name="" value="3" id="LongBreakInterval">
+                    </div>
+
+                </div>
+                <div class="bottom">
+                    <button class="ok">Ok</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="main-clock">
+                <div class="header-clock">
+                    <button class="active" id="pomo">Pomodoro</button>
+                    <button id="short">Short Break</button>
+                    <button id="long">Long Break</button>
+                </div>
+                <div id="timer-string">
+                    <input class="minute" value="30" type="text" name="" id="m_val">
+                    <span>:</span>
+                    <input class="second" value="0" type="text" name="" id="s_val">
+                </div>
+                <div class="start">
+                    <button>Start</button>
+
+                </div>
+                <div class="forward">
+                    <ion-icon name="play-skip-forward"></ion-icon>
+                </div>
+
+            </div>
+            <div class="note">
+                <span>#<span class="number">1</span></span>
+                <span class="title">Time to focus!</span>
+            </div>
+            <div class="task">
+                <div class="task-choice">
+                    <span>Task</span>
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                </div>
+                <input type="text" name="" id="task">
+                <button><ion-icon name="add-circle"></ion-icon>
+                    Add task</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

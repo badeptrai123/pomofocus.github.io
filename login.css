@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  background: #d95550;
+  font-family: sans-serif;
+  position: relative;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+#wrapper {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+#wrapper header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#wrapper header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+#wrapper header .logo ion-icon {
+  font-size: 40px;
+  margin-right: 5px;
+}
+
+#wrapper header .logo a {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+#wrapper header span {
+  font-size: 20px;
+  color: #f7dddc;
+}
+
+#wrapper .content {
+  margin-top: 40px;
+  border-radius: 5px;
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+}
+
+#wrapper .content .top {
+  position: relative;
+  border-bottom: 1px solid #dad8d8;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+#wrapper .content .top button {
+  background: #fff;
+  border: none;
+  -webkit-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  width: 100%;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  color: #938e8e;
+  font-weight: bold;
+}
+
+#wrapper .content .top button img {
+  width: 20px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#wrapper .content .top span.or {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #bab5b5;
+  width: 40px;
+  height: 10px;
+  background-color: #fff;
+}
+
+#wrapper .content #form-login {
+  text-align: start;
+}
+
+#wrapper .content #form-login label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #c7c4c4;
+  margin-bottom: 5px;
+}
+
+#wrapper .content #form-login input {
+  width: 100%;
+  border: none;
+  padding: 13px 10px;
+  background: #efefef;
+  margin-bottom: 17px;
+  color: #333;
+  outline: none;
+}
+
+#wrapper .content #form-login input::-webkit-input-placeholder {
+  font-size: 16px;
+  color: #bdb7b7;
+}
+
+#wrapper .content #form-login input:-ms-input-placeholder {
+  font-size: 16px;
+  color: #bdb7b7;
+}
+
+#wrapper .content #form-login input::-ms-input-placeholder {
+  font-size: 16px;
+  color: #bdb7b7;
+}
+
+#wrapper .content #form-login input::placeholder {
+  font-size: 16px;
+  color: #bdb7b7;
+}
+
+#wrapper .content #form-login input[type="button"] {
+  background: #333;
+  color: #eaeaea;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+#wrapper .content .bottom a {
+  color: #333;
+  text-decoration: underline;
+  color: #c0bebe;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#wrapper .Logout {
+  text-align: center;
+  margin-top: 25px;
+}
+
+#wrapper .Logout span {
+  display: block;
+  color: #e7e1e1;
+  margin-bottom: 10px;
+}
+
+#wrapper .Logout a {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #e7e1e1;
+  font-size: 14px;
+}
+/*# sourceMappingURL=login.css.map */

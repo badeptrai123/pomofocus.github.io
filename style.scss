@@ -1,0 +1,332 @@
+@import "global";
+@import "variables";
+@import "mixins";
+body.bg-black::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    opacity: .3;
+    left: 0;
+    top: 0;
+}
+
+#wrapper {
+    max-width: 560px;
+    position: relative;
+    margin: 0 auto;
+    header {
+        @include Flex(space-between, center);
+        padding: 15px 0;
+        margin-bottom: 45px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 1px;
+            background: rgb(58, 56, 56);
+            opacity: 0.2;
+        }
+        .logo {
+            @include Flex(flex-start, center);
+            ion-icon {
+                font-size: 25px;
+                margin-right: 5px;
+            }
+            a {
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+        ul#main-menu {
+            @include Flex(flex-end, center);
+            li {
+                margin-left: 15px;
+                padding: 8px 13px;
+                cursor: pointer;
+                position: relative;
+                display: flex;
+                align-items: center;
+                ion-icon {
+                    margin-right: 5px;
+                }
+                span {
+                    font-size: 13px;
+                }
+                &::after {
+                    content: "";
+                    @include Position(100%, 100%, 0, 0);
+                    border-radius: 4px;
+                    opacity: 0.2;
+                    background: rgb(230, 236, 230);
+                }
+            }
+        }
+        .timer-setting {
+            display: none;
+            background-color: #fff;
+            // height: 1000px;
+            padding: 15px;
+            color: #333;
+            width: 400px;
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 8px;
+            z-index: 999;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+            .top {
+                padding: 5px;
+                border-bottom: 1px solid #dfdbdb;
+                @include Flex(space-between, center);
+                span {
+                    color: #bebebe;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                button {
+                    border: none;
+                    cursor: pointer;
+                    background: none;
+                    ion-icon {
+                        color: #9a9292;
+                        font-size: 32px;
+                    }
+                }
+            }
+            .content {
+                .time-minutes {
+                    padding: 20px 0 25px;
+                    border-bottom: 1px solid #dfdbdb;
+                    span {
+                        display: block;
+                        color: rgb(112, 112, 112);
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    ul {
+                        width: 100%;
+                        @include Flex(space-between, center);
+                        li {
+                            width: 26%;
+                            border-radius: 3px;
+                            label {
+                                color: #bebebe;
+                                font-weight: bold;
+                                font-size: 14px;
+                            }
+                            input {
+                                margin-top: 5px;
+                                border-radius: 3px;
+                                width: 100%;
+                                border: none;
+                                background: #efefef;
+                                padding: 6px 10px;
+                                color: #000;
+                                outline: none;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+                .interval {
+                    padding: 20px 0;
+                    color: rgb(112, 112, 112);
+                    border-bottom: 1px solid #dfdbdb;
+                    font-weight: bold;
+                    @include Flex(space-between, center);
+                    span {
+                        color: rgb(112, 112, 112);
+                    }
+                    input {
+                        border-radius: 3px;
+                        width: 19%;
+                        border: none;
+                        background: #efefef;
+                        padding: 12px 10px;
+                        color: #000;
+                        outline: none;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .bottom {
+                margin-top: 20px;
+                text-align: right;
+                button {
+                    background: #333;
+                    color: rgb(219, 214, 214);
+                    padding: 10px 25px;
+                    text-transform: uppercase;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    transition: all .2s ease;
+                    &:hover {
+                        background: #000;
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto;
+        .main-clock {
+            background: $main-bg-color;
+            position: relative;
+            .header-clock {
+                @include Flex(space-between, center);
+                margin-bottom: 40px;
+                padding: 15px 70px 0 70px;
+                button {
+                    outline: none;
+                    border: none;
+                    padding: 5px 10px;
+                    flex: 33.33%;
+                    background: none;
+                    border-radius: 5px;
+                    font-size: 15px;
+                    cursor: pointer;
+                }
+                button.active {
+                    background: #bc5753;
+                }
+                button.activeShort {
+                    background: #508588;
+                }
+                button.activeLong {
+                    background: #4B7592;
+                }
+            }
+            #timer-string {
+                text-align: center;
+                padding-bottom: 20px;
+                input {
+                    width: 150px;
+                    font-size: 120px;
+                    background: none;
+                    text-align: center;
+                    font-weight: bold;
+                    border: none;
+                    pointer-events: none;
+                }
+                span {
+                    font-size: 120px;
+                }
+            }
+            .start {
+                width: 100%;
+                text-align: center;
+                padding: 15px 70px 0 70px;
+                button {
+                    padding: 15px 60px;
+                    color: $main-bg-pomo;
+                    border: none;
+                    display: inline-block;
+                    font-size: 22px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+            }
+            .forward {
+                position: relative;
+                padding: 15px 0;
+                ion-icon {
+                    display: none;
+                    font-size: 33px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-177%);
+                    left: 80%;
+                    cursor: pointer;
+                    transition: all .2s ease-in;
+                    &:hover {
+                        color: rgb(236, 222, 222);
+                    }
+                }
+            }
+        }
+        .note {
+            margin: 25px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            font-size: 19px;
+            span:first-child {
+                color: rgb(203, 204, 203);
+            }
+        }
+        .task {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-top: 50px;
+            font-size: 20px;
+            .task-choice {
+                position: absolute;
+                top: -30px;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                ion-icon {
+                    padding: 5px;
+                    position: relative;
+                    border-radius: 3px;
+                    &::after {
+                        content: "";
+                        border-radius: 4px;
+                        @include Position(100%, 100%, 0, 0);
+                        opacity: 0.2;
+                        background: rgb(230, 236, 230);
+                    }
+                }
+            }
+            input {
+                background: none;
+                border: none;
+                outline: none;
+                font-size: 17px;
+                border-bottom: 2px solid rgb(219, 206, 206);
+            }
+            button {
+                margin-top: 20px;
+                padding: 15px 0;
+                font-size: 20px;
+                background: inherit;
+                @include Flex(center, center);
+                cursor: pointer;
+                position: relative;
+                border: none;
+                border-radius: 4px;
+                opacity: .8;
+                ion-icon {
+                    margin-right: 6px;
+                }
+                &::after {
+                    content: "";
+                    @include Position(100%, 100%, 0, 0);
+                    border-radius: inherit;
+                    opacity: 0.2;
+                    background: rgb(66, 68, 66);
+                    border: 3px dashed #fff;
+                    box-sizing: border-box;
+                }
+                &:hover {
+                    transition: all .2s ease-in-out;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

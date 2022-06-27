@@ -1,0 +1,120 @@
+@import "global";
+@import "mixins";
+#wrapper {
+    max-width: 360px;
+    margin: 0 auto;
+    header {
+        text-align: center;
+        margin-top: 50px;
+        .logo {
+            @include Flex(center, center);
+            margin-bottom: 25px;
+            ion-icon {
+                font-size: 40px;
+                margin-right: 5px;
+            }
+            a {
+                font-weight: 600;
+                font-size: 40px;
+            }
+        }
+        span {
+            font-size: 20px;
+            color: #f7dddc;
+        }
+    }
+    .content {
+        margin-top: 40px;
+        border-radius: 5px;
+        padding: 20px;
+        background: #fff;
+        text-align: center;
+        .top {
+            position: relative;
+            border-bottom: 1px solid rgb(218, 216, 216);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            button {
+                background: #fff;
+                border: none;
+                box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, .3);
+                width: 100%;
+                border-radius: 3px;
+                @include Flex(center, center);
+                padding: 10px;
+                color: rgb(147, 142, 142);
+                font-weight: bold;
+                img {
+                    width: 20px;
+                    height: auto;
+                    margin-right: 10px;
+                }
+            }
+            span.or {
+                position: absolute;
+                top: 88%;
+                left: 50%;
+                transform: translateX(-50%);
+                color: rgb(186, 181, 181);
+                width: 40px;
+                height: 10px;
+                background-color: #fff;
+            }
+        }
+        #form-login {
+            text-align: start;
+            label {
+                display: block;
+                font-size: 13px;
+                font-weight: bold;
+                color: rgb(199, 196, 196);
+                margin-bottom: 5px;
+            }
+            input {
+                width: 100%;
+                border: none;
+                padding: 13px 10px;
+                background: #efefef;
+                margin-bottom: 17px;
+                color: #333;
+                outline: none;
+                &::placeholder {
+                    font-size: 16px;
+                    color: rgb(189, 183, 183);
+                }
+            }
+            input[type="button"] {
+                background: #333;
+                color: #eaeaea;
+                cursor: pointer;
+                font-size: 14px;
+                border-radius: 4px;
+                margin-top: 20px;
+            }
+        }
+        .bottom {
+            a {
+                color: #333;
+                text-decoration: underline;
+                color: rgb(192, 190, 190);
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+    }
+    .Logout {
+        text-align: center;
+        margin-top: 25px;
+        span {
+            display: block;
+            color: rgb(231, 225, 225);
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: underline;
+            font-weight: 600;
+            color: rgb(231, 225, 225);
+            font-size: 14px;
+        }
+    }
+}

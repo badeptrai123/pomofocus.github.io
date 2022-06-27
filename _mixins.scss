@@ -1,0 +1,13 @@
+@mixin Flex($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin Position($width, $height, $left, $top) {
+    position: absolute;
+    width: $width;
+    height: $height;
+    left: $left;
+    top: $top;
+}
